@@ -1,22 +1,143 @@
-/* line 4, ../sass/_blocks.scss */
+/* line 1, ../sass/_blocks.scss */
+.paper-block {
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  background: #f6f6f6;
+  border: 1px solid #f9f9f9;
+}
+/* line 11, ../sass/_blocks.scss */
+.paper-block.flat {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+/* line 15, ../sass/_blocks.scss */
+.paper-block.flat:before, .paper-block.flat:after {
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  left: 0;
+  top: 0;
+  border-radius: 0px;
+}
+/* line 23, ../sass/_blocks.scss */
+.paper-block.flat:before {
+  -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+}
+/* line 28, ../sass/_blocks.scss */
+.paper-block.curl {
+  -webkit-border-radius: 0 0 100% 100%/0 0 10% 10%;
+  -moz-border-radius: 0 0 100% 100%/0 0 10% 10%;
+  -ms-border-radius: 0 0 100% 100%/0 0 10% 10%;
+  -o-border-radius: 0 0 100% 100%/0 0 10% 10%;
+  border-radius: 0 0 100% 100%/0 0 10% 10%;
+}
+/* line 32, ../sass/_blocks.scss */
+.paper-block.curl:before, .paper-block.curl:after {
+  -webkit-transform: skew(-8deg) rotate(-3deg);
+  -moz-transform: skew(-8deg) rotate(-3deg);
+  -ms-transform: skew(-8deg) rotate(-3deg);
+  -o-transform: skew(-8deg) rotate(-3deg);
+  transform: skew(-8deg) rotate(-3deg);
+  -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  bottom: 12px;
+  left: 10px;
+  width: 50%;
+  height: 55%;
+  max-width: 300px;
+}
+/* line 43, ../sass/_blocks.scss */
+.paper-block.curl:before {
+  -webkit-transform: skew(8deg) rotate(3deg);
+  -moz-transform: skew(8deg) rotate(3deg);
+  -ms-transform: skew(8deg) rotate(3deg);
+  -o-transform: skew(8deg) rotate(3deg);
+  transform: skew(8deg) rotate(3deg);
+  left: auto;
+  right: 10px;
+}
+/* line 51, ../sass/_blocks.scss */
+.paper-block.lift {
+  -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+}
+/* line 55, ../sass/_blocks.scss */
+.paper-block.lift:before, .paper-block.lift:after {
+  -webkit-box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  z-index: -2;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+  max-width: 300px;
+}
+/* line 66, ../sass/_blocks.scss */
+.paper-block.lift:before {
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
+  left: auto;
+  right: 10px;
+}
+/* line 77, ../sass/_blocks.scss */
 .paper-block:before, .paper-block:after {
   content: '';
   width: 100%;
   height: 100%;
   position: absolute;
   background: white;
-  left: 0;
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-}
-/* line 15, ../sass/_blocks.scss */
-.paper-block:before {
-  top: 10px;
-  z-index: -2;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-}
-/* line 21, ../sass/_blocks.scss */
-.paper-block:after {
-  top: 7px;
   z-index: -1;
+}
+/* line 87, ../sass/_blocks.scss */
+.paper-block.realshadow.to-left {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), -4px 0px 3px rgba(0, 0, 0, 0.04), -11px 0px 6px rgba(0, 0, 0, 0.04), -20px 0px 10px rgba(0, 0, 0, 0.04), -34px 0px 15px rgba(0, 0, 0, 0.04), -51px 0px 21px rgba(0, 0, 0, 0.04);
+}
+/* line 96, ../sass/_blocks.scss */
+.paper-block.realshadow.to-right {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 4px 0px 3px rgba(0, 0, 0, 0.04), 11px 0px 6px rgba(0, 0, 0, 0.04), 20px 0px 10px rgba(0, 0, 0, 0.04), 34px 0px 15px rgba(0, 0, 0, 0.04), 51px 0px 21px rgba(0, 0, 0, 0.04);
+}
+/* line 106, ../sass/_blocks.scss */
+.paper-block.realshadow.to-bottom {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 3px rgba(0, 0, 0, 0.04), 0px 11px 6px rgba(0, 0, 0, 0.04), 0px 20px 10px rgba(0, 0, 0, 0.04), 0px 34px 15px rgba(0, 0, 0, 0.04), 0px 51px 21px rgba(0, 0, 0, 0.04);
+}
+/* line 116, ../sass/_blocks.scss */
+.paper-block.realshadow.to-top {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px -2px 3px rgba(0, 0, 0, 0.04), 0px -5px 6px rgba(0, 0, 0, 0.04), 0px -10px 10px rgba(0, 0, 0, 0.04), 0px -17px 15px rgba(0, 0, 0, 0.04), 0px -25px 21px rgba(0, 0, 0, 0.04);
+}
+/* line 126, ../sass/_blocks.scss */
+.paper-block.realshadow.to-left-top {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), -2px -2px 3px rgba(0, 0, 0, 0.04), -5px -5px 6px rgba(0, 0, 0, 0.04), -10px -10px 10px rgba(0, 0, 0, 0.04), -17px -17px 15px rgba(0, 0, 0, 0.04), -25px -25px 21px rgba(0, 0, 0, 0.04);
+}
+/* line 136, ../sass/_blocks.scss */
+.paper-block.realshadow.to-right-top {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 2px -2px 3px rgba(0, 0, 0, 0.04), 5px -5px 6px rgba(0, 0, 0, 0.04), 10px -10px 10px rgba(0, 0, 0, 0.04), 17px -17px 15px rgba(0, 0, 0, 0.04), 25px -25px 21px rgba(0, 0, 0, 0.04);
+}
+/* line 146, ../sass/_blocks.scss */
+.paper-block.realshadow.to-left-bottom {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), -2px 2px 3px rgba(0, 0, 0, 0.04), -5px 5px 6px rgba(0, 0, 0, 0.04), -10px 10px 10px rgba(0, 0, 0, 0.04), -17px 17px 15px rgba(0, 0, 0, 0.04), -25px 25px 21px rgba(0, 0, 0, 0.04);
+}
+/* line 155, ../sass/_blocks.scss */
+.paper-block.realshadow.to-right-bottom {
+  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 2px 2px 3px rgba(0, 0, 0, 0.04), 5px 5px 6px rgba(0, 0, 0, 0.04), 10px 10px 10px rgba(0, 0, 0, 0.04), 17px 17px 15px rgba(0, 0, 0, 0.04), 25px 25px 21px rgba(0, 0, 0, 0.04);
 }
