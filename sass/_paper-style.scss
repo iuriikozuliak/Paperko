@@ -1,0 +1,58 @@
+.paperko-folded {
+    @include background-image(linear-gradient(hsla(0, 0%, 0%, .025), hsla(0, 0%, 100%, .05) 33%, hsla(0, 0%, 0%, .05) 33%, hsla(0, 0%, 100%, .05) 67%, hsla(0, 0%, 0%, .05) 67%, hsla(0, 0%, 100%, .025)));
+}
+
+
+.paperko-list{
+    background: #fff;
+
+    ul{
+        list-style: none;
+        padding:1em 0;
+
+        &:after{
+            content: '';
+            position: absolute;
+            left: 25px;
+            top: -1px;
+            border-left: 1px solid rgba(240,214,213,1);
+            border-right: 1px solid rgba(240,214,213,1);
+            width: 1px;
+            height: 101%;
+        }
+    }
+
+
+    li{
+        border-bottom: 1px solid rgba(205,220,243,1);
+        padding: 8px 10px 2px 35px;
+    }
+}
+
+.paperko-list-bullets{
+    @extend .paperko-list;
+
+    li{
+        position: relative;
+
+        &:before{
+            content: '';
+            display: block;
+            width: 10px;
+            height: 10px;
+            border-radius: 5px;
+            position: absolute;
+            background: rgba(255,255,255,1);
+            top: 50%;
+            margin-top: -4px;
+            left: 2%;
+            z-index: 10;
+            box-shadow:
+                inset 2px 2px 5px rgba(125,125,125,.6),
+                2px 50.1em 5px rgba(255,255,255,1), 0px 50em rgba(125,125,125,.75),
+                2px 90.1em 5px rgba(255,255,255,1), 0px 90em rgba(125,125,125,.5),
+                2px 130.1em 5px rgba(255,255,255,1), 0px 130em rgba(125,125,125,.25);
+        }
+    }
+}
+

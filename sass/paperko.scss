@@ -5,4 +5,7 @@ $paperkoShadowMaxWidth:     300px;
 $paperkoDefaultShadow:      0px 1px 4px rgba(0, 0, 0, 0.1);
 
 @import "compass";
+
 @import "blocks";
+@import "paper-style";
+@import "scaffolding";

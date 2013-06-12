@@ -8,6 +8,10 @@
 
     // default paper box-shadow
 
+    &.inner-shadow{
+        @include box-shadow(0 0 20px rgba(0, 0, 0, 0.05) inset);
+    }
+
     &.flat {
         @include box-shadow(none);
 
@@ -18,6 +22,7 @@
             left: 0;
             top: 0;
             border-radius: $paperkoRadius;
+            max-width: 100%;
         }
 
         &:before {
@@ -30,27 +35,44 @@
 
         &:before,
         &:after{
-            @include transform(skew(-8deg) rotate(-3deg));
+            @include transform(skew(-16deg) rotate(-3deg));
             @include box-shadow(0 8px 12px rgba(0, 0, 0, 0.5));
 
             bottom:12px;
             left:10px;
             width:50%;
-            height:55%;
-            max-width:$paperkoShadowMaxWidth;
+            height:50%;
         }
 
         &:before{
-            @include transform(skew(8deg) rotate(3deg));
+            @include transform(skew(16deg) rotate(3deg));
 
             left:auto;
             right:10px;
         }
     }
 
-    &.lift {
-        @include box-shadow(0px 1px 4px rgba(0, 0, 0, 0.1));
+    &.curl-left{
+        @include border-radius(0 0 0 100%/0 0 0 5%);
 
+        &:after{
+            @extend .curl:after;
+        }
+
+    }
+
+    &.curl-right{
+        @include border-radius(0 0 100% 0/0 0 5% 0);
+
+        &:before{
+            @extend .curl:before;
+            z-index: -1;
+        }
+        &:after{display: none}
+
+    }
+
+    &.lift {
         &:before,
         &:after{
             @include box-shadow(0 15px 7px rgba(0, 0, 0, 0.4));
@@ -61,7 +83,6 @@
             left:10px;
             width:50%;
             height:20%;
-            max-width:$paperkoShadowMaxWidth;
         }
         &:before{
             @include transform(rotate(3deg));
@@ -70,6 +91,172 @@
             right:10px;
         }
 
+    }
+
+    &.light{
+
+        &:before,
+        &:after{
+            @include transform-origin(0,100%);
+
+            left:80px;
+            bottom:8px;
+            width:50%;
+            height:30%;
+        }
+
+        &:before{
+            @include box-shadow(-80px 0 16px rgba(0, 0, 0, 0.2));
+            @include transform(skew(40deg));
+
+        }
+
+        &:after{
+            @include box-shadow(80px 0 16px rgba(0, 0, 0, 0.2));
+            @include transform(skew(-40deg));
+
+            left:auto;
+            right:80px;
+        }
+    }
+
+    &.light-right{
+        &:before{
+            @extend .light:before;
+        }
+    }
+
+    &.light-left{
+        &:before{
+            @extend .light:after;
+        }
+        &:after{
+            display: none;
+        }
+    }
+
+    &.levitation{
+        @include box-shadow(
+                0 1px 4px rgba(0, 0, 0, 0.2),
+                0 18px 10px -15px rgba(0, 0, 0, 0.4),
+                0 1px 4px rgba(0, 0, 0, 0.2));
+    }
+
+    &.shade-horizontal{
+        &:before,
+        &:after{
+            @include border-radius(100% 100% / 15% 15%);
+            @include box-shadow(0 0 12px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.2));
+
+            top:50%;
+            bottom:0px;
+            left:10px;
+            right:10px;
+
+            width:auto;
+            height: auto;
+        }
+
+        &:after{
+            top:0;
+            bottom: 50%;
+        }
+    }
+    &.shade-top{
+        &:after{ @extend .shade-horizontal:after}
+    }
+    &.shade-bottom{
+        &:before{ @extend .shade-horizontal:before}
+        &:after { display: none}
+    }
+
+    &.shade-half-horizontal{
+
+        &:after,
+        &:before{
+            @include border-radius(100% 100% / 100% 25%);
+        }
+
+        &:after{
+            @extend .shade-horizontal:after;
+        }
+        &:before{
+            @extend .shade-horizontal:before;
+        }
+    }
+    &.shade-half-top{
+        &:after{ @extend .shade-half-horizontal:after}
+    }
+    &.shade-half-bottom{
+        &:before{ @extend .shade-half-horizontal:before}
+        &:after { display: none}
+    }
+
+
+    &.shade-vertical{
+        &:before,
+        &:after{
+            @include border-radius(15% 15% / 100% 100% );
+            @include box-shadow(0 0 16px rgba(0,0,0,0.2), 0 0 5px rgba(0,0,0,0.2));
+
+            left:0;
+            right:50%;
+            top:10px;
+            bottom:10px;
+
+            height: auto;
+            width: auto;
+        }
+
+        &:after{
+            right:0;
+            left: 50%;
+        }
+    }
+    &.shade-right{
+        &:after{ @extend .shade-vertical:after}
+    }
+    &.shade-left{
+        &:before{ @extend .shade-vertical:before}
+        &:after {display: none}
+    }
+
+
+    &.stacked-chaos{
+        &:before,
+        &:after {
+            content: "";
+            height: 98%;
+            position: absolute;
+            width: 100%;
+            max-width: 100%;
+            z-index: -1;
+        }
+        &:before {
+            background: #fafafa;
+            box-shadow: 0 0 8px rgba(0,0,0,0.2);
+            left: -5px;
+            top: 0px;
+            transform: rotate(-2.5deg);
+        }
+        &:after {
+            background: #f6f6f6;
+            box-shadow: 0 0 3px rgba(0,0,0,0.2);
+            right: -3px;
+            top: 1px;
+            transform: rotate(1.4deg);
+        }
+    }
+
+    &.stacked{
+        box-shadow:
+            1px 1px   0 rgba(0,   0,   0,   0.100),
+            3px 3px   0 rgba(246, 246, 246, 1.0),
+            4px 4px   0 rgba(0,   0,   0,   0.125),
+            6px 6px   0 rgba(246, 246, 246, 1.0),
+            7px 7px   0 rgba(0,   0,   0,   0.150),
+            9px 9px   0 rgba(246, 246, 246, 1.0),
+            10px 10px 0 rgba(0,   0,   0,   0.175);
     }
 
     // common styles for before/after
@@ -81,11 +268,23 @@
         position: absolute;
         background: white;
         z-index: -1;
+        max-width:$paperkoShadowMaxWidth;
+
     }
+
+
+
+
+
+
+
+
+
+
 
     &.realshadow{
         &.to-left{
-            box-shadow: 
+            box-shadow:
                 0px 0px 1px     rgba(0, 0, 0, 0.04),
                 -4px 0px 3px    rgba(0, 0, 0, 0.04),
                 -11px 0px 6px   rgba(0, 0, 0, 0.04),
@@ -94,7 +293,7 @@
                 -51px 0px 21px rgba(0, 0, 0, 0.04);
         }
         &.to-right{
-            box-shadow: 
+            box-shadow:
                 0px 0px 1px    rgba(0, 0, 0, 0.04),
                 4px 0px 3px    rgba(0, 0, 0, 0.04),
                 11px 0px 6px   rgba(0, 0, 0, 0.04),
