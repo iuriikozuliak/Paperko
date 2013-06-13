@@ -1,0 +1,175 @@
+.paperko-fold-horizontal {
+    display: block;
+    position: relative;
+    padding:0;
+
+    img{
+        visibility: hidden;
+    }
+
+    &:before {
+        @include transition(all 300ms ease-in-out);
+
+        content: '';
+        background: #fff;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+
+    }
+
+    &[class*="span"]{
+        .fold-overlay{
+            background-size:202% 100% !important;
+        }
+    }
+
+    .fold-overlay {
+        @include perspective(700px);
+        @include transition(all 400ms ease-in-out);
+
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-position: -65000px 0 !important;
+        background-repeat: no-repeat !important;
+
+
+        &:before,
+        &:after {
+            @include transition(all 300ms ease-in-out);
+            @include transform-style(preserve-3d);
+
+            content: '';
+            position: absolute;
+            height: 100%;
+            left: 0;
+            top:0;
+            backface-visibility: hidden;
+            width: 50%;
+            background: inherit;
+        }
+
+        &:before {
+            background-position: 0 0;
+            margin-left: 0;
+            @include transform-origin(right, center);
+
+        }
+        &:after {
+            background-position: 100% 0;
+            margin-left: 50%;
+            @include transform-origin(left, center);
+
+        }
+
+        p{
+            padding: .5em 1em;
+            font-size:14px;
+        }
+    }
+
+    &:hover{
+
+        .fold-overlay {
+            @include box-shadow(inset 0 0 100px rgba(0, 0, 0, 0.2));
+
+            &:before {
+                @include box-shadow(inset -10px 0 40px rgba(0, 0, 0, 0.2));
+
+                @include transform(rotate3d(0, 1, 0, 45deg));
+            }
+            &:after {
+                @include box-shadow(inset 10px 0 40px rgba(0, 0, 0, 0.2));
+
+
+                @include transform(rotate3d(0, 1, 0, -45deg));
+            }
+        }
+
+    }
+}
+
+.paperko-fold-vertical{
+    @extend .paperko-fold-horizontal;
+    .fold-overlay{
+        &:before,
+        &:after {
+            width:100%;
+            height:50%;
+            margin:0;
+        }
+
+        &:before {
+            background-position: 0 0;
+            margin-left: 0;
+            @include transform-origin(bottom, center);
+
+        }
+        &:after {
+            background-position: 0 100%;
+            top: 50%;
+            @include transform-origin(top, center);
+
+        }
+    }
+
+    &:hover{
+
+        .fold-overlay {
+
+            &:before {
+                @include transform(rotate3d(1, 0, 0, -45deg));
+            }
+            &:after {
+                @include transform(rotate3d(1, 0, 0, 45deg));
+            }
+        }
+
+    }
+}
+
+.paperko-fold-left{
+    @extend .paperko-fold-horizontal;
+    &:hover{
+        .fold-overlay {
+            &:before        {@include transform(rotate3d(0, 1, 0, -90deg))}
+            &:after         {@include transform(rotate3d(0, 1, 0, -30deg))}
+        }
+    }
+}
+
+.paperko-fold-right{
+    @extend .paperko-fold-horizontal;
+    &:hover{
+        .fold-overlay {
+            &:before        {@include transform(rotate3d(0, 1, 0, 30deg))}
+            &:after         {@include transform(rotate3d(0, 1, 0, 90deg))}
+        }
+    }
+}
+
+.paperko-fold-top{
+    @extend .paperko-fold-vertical;
+    &:hover{
+        .fold-overlay {
+            &:before        {@include transform(rotate3d(1, 0, 0, 90deg))}
+            &:after         {@include transform(rotate3d(1, 0, 0, 30deg))}
+        }
+    }
+}
+
+.paperko-fold-bottom{
+    @extend .paperko-fold-vertical;
+    &:hover{
+        .fold-overlay {
+            &:before        {@include transform(rotate3d(1, 0, 0, -30deg))}
+            &:after         {@include transform(rotate3d(1, 0, 0, -90deg))}
+        }
+    }
+}

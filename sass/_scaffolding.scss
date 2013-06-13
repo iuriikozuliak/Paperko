@@ -3,7 +3,8 @@
 
     padding: 1em 1.5em;
 
-    &.paperko-list{
+    &.paperko-list,
+    &.paperko-fold-horizontal{
         padding: 0;
     }
 
@@ -29,4 +30,8 @@ h3{
 h4{
     padding: 0 0 .25em;
     margin: 0 !important;
+}
+
+.pull-left{
+    margin-right: 1em;
 }
