@@ -1,7 +1,10 @@
-.paper-block {
-    position: relative;
+.paperko-block {
+    @include border-radius($paperkoRadius);
 
+    position: relative;
     padding: 1em 1.5em;
+    background: $paperkoBackground;
+    border: 1px solid $paperkoBorder;
 
     &.paperko-list,
     &.paperko-fold-horizontal{
@@ -11,26 +14,28 @@
     p{
         padding: 0;
     }
+
+
+    h4{
+        padding: 0 0 .25em;
+        margin: 0 !important;
+    }
+
+    label{
+        font-size:14px;
+        padding: 5px 0;
+    }
 }
 
 .row{
     margin-bottom: 2.5em;
 }
 
-h2{
-    font-size:2em;
-    padding-bottom: 1em;
-}
-
 h3{
     padding-bottom: 1em;
-    font-size:1.5em;
 }
 
-h4{
-    padding: 0 0 .25em;
-    margin: 0 !important;
-}
+
 
 .pull-left{
     margin-right: 1em;

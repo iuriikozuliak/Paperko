@@ -13,10 +13,10 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-2.3.1.min.css">
+    <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/paperko.css">
-    <!-- endbuild -->
-    <script src="components/d3/d3.min.js"></script>
+    <link rel="stylesheet" href="css/google-code-prettify/prettify.css">
 </head>
 <body ng-app="homepageApp">
 <!--[if lt IE 7]>
@@ -25,148 +25,179 @@
     experience this site.</p>
 <![endif]-->
 
-<div class="navbar" ng-controller="MainCtrl">
-    <a class="logo" href="#"></a>
+<div class="navbar">
+    <a class="logo" href="http://ikozuliak.com"></a>
     <nav>
         <ul>
-            <li><a href="#/">home</a></li>
+            <li><a href="http://ikozuliak.com">home</a></li>
         </ul>
     </nav>
 </div>
 
 <section id="content">
 <article class="page">
+
+<h3><a href="#">Github project</a></h3>
+
 <h1>Paperko</h1>
 
 <h2 class="subheader">
-    The ulimate collection of css3 paper like effects, behaviours and styles, written with SASS and love.
+    The ulimate collection of css3 paper-like behaviours and styles, written in SASS.
 </h2>
-
-<h2>Let's fold !</h2>
-
-<div class="row">
-    <div class="paper-block flat paperko-fold-horizontal pull-left">
-        <img src="art/gap1-small.jpg" alt="">
-        <span class="fold-overlay" style="background: url('art/gap1-small.jpg')"></span>
-    </div>
-
-    <div class="paper-block levitation paperko-fold-vertical pull-left">
-        <img src="art/gap2-small.jpg" alt="">
-
-        <div class="fold-overlay text-center" style="background: url('art/gap2-small.jpg')">
-            Yep, i'm here.
-        </div>
-    </div>
-
-</div>
-
-<div class="row">
-
-    <div class="paper-block flat paperko-fold-left pull-left">
-        <img src="art/gap3-small.jpg" alt="">
-
-        <div class="fold-overlay " style="background: url('art/gap3-small.jpg')">
-            <p>
-                Hi <br>
-                there
-            </p>
-        </div>
-    </div>
-
-    <div class="paper-block flat paperko-fold-right pull-left">
-        <img src="art/gap3-small.jpg" alt="">
-
-        <div class="fold-overlay" style="background: url('art/gap4-small.jpg')">
-            <p class="text-right">
-                Hi <br>
-                there
-            </p>
-        </div>
-    </div>
-
-    <div class="paper-block flat paperko-fold-top pull-left">
-        <img src="art/gap3-small.jpg" alt="">
-
-        <div class="fold-overlay" style="background: url('art/gap5-small.jpg')">
-            <p>
-                You can use default bootstraps elements, like <a class="btn" href="#">Buttons</a>
-            </p>
-
-        </div>
-    </div>
-
-    <div class="paper-block flat paperko-fold-bottom pull-left">
-        <img src="art/gap4-small.jpg" alt="">
-
-        <div class="fold-overlay " style="background: url('art/gap6-small.jpg')">
-        </div>
-    </div>
-</div>
-
 
 <h2>Basic Boxes</h2>
 
+<p>Three basic classes <code>.flat</code> <code>.lift</code> <code>.levitation</code> to use with <code>.paperko</code>
+    or <code>.paperko-block</code></p>
+
 <div class="row">
-    <div class="paper-block flat span4">
+    <div class="paperko-block flat span4">
         <h4>Flat one</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+            tortor urna condimentum lorem. </p>
     </div>
-    <div class="paper-block lift span4">
+
+    <div class="paperko-block lift span4">
         <h4>With lifted corners</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+            tortor urna condimentum lorem. </p>
     </div>
 
-    <div class="paper-block levitation span4">
+    <div class="paperko-block levitation span4">
         <h4>Small levitation</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+            tortor urna condimentum lorem. </p>
+    </div>
+</div>
+
+<h3>Usage:</h3>
+
+<div class="row">
+
+<pre class="prettyprint linenums span8">
+&lt;a class="btn btn-large paperko lift"&gt;
+    Bootstrap button with lifted corners
+&lt;/a&gt;
+&lt;a class="btn btn-large paperko-block levitation"&gt;
+    Paperko-block button with lifted corners
+&lt;/a&gt;
+</pre>
+
+    <div class="span4">
+        <a class="btn btn-large paperko lift" href="#">Bootstrap button with lifted corners</a>
+        <br>
+        <br>
+        <a class="btn btn-large paperko-block levitation" href="#">Paperko-block button with levitation</a>
     </div>
 
 </div>
 
+<h2>Perspective light</h2>
+
 <div class="row">
-    <div class="paper-block light-right span4">
+    <div class="paperko-block light-right span4">
         <h4>Light from right</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+            tortor urna condimentum lorem. </p>
     </div>
-    <div class="paper-block light span4">
+    <div class="paperko-block light span4">
         <h4>Light from right and left</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+            tortor urna condimentum lorem. </p>
     </div>
-    <div class="paper-block light-left span4">
+    <div class="paperko-block light-left span4">
         <h4>Light from left</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+            tortor urna condimentum lorem. </p>
     </div>
 </div>
 
+<h3>Usage:</h3>
+
 <div class="row">
 
-    <div class="paper-block curl span4">
+    <div class="span6">
+<pre class="prettyprint linenums ">
+&lt;div class="span6 paperko-block light"&gt;
+    &lt;table class="table"&gt;
+        ...
+    &lt;/table&gt;
+&lt;/div&gt;
+</pre>
+        <p style="margin: -12px 0 10px; padding: 0 0 0 10px">or</p>
+<pre class="prettyprint linenums ">
+&lt;table class="table paperko-block light"&gt;
+    ...
+&lt;/table&gt;
+</pre>
+    </div>
+
+    <div class="span6 paperko-block light">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<h2>Curled corners</h2>
+
+<div class="row">
+
+    <div class="paperko-block curl span4">
         <h4>And curled corners too</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 
-    <div class="paper-block curl-left span4">
+    <div class="paperko-block curl-left span4">
         <h4>Curl left corner</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 
-    <div class="paper-block curl-right span4">
+    <div class="paperko-block curl-right span4">
         <h4>Curled right corner</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
@@ -174,23 +205,106 @@
     </div>
 </div>
 
+
+<h3>Usage:</h3>
+
 <div class="row">
 
-    <div class="paper-block shade-horizontal span4">
+<pre class="prettyprint linenums span8">
+&lt;form&gt;
+    &lt;div class="control-group paperko-block curl-left"&gt;
+      ...
+    &lt;/div&gt;
+
+    &lt;div class="control-group paperko-block curl-right"&gt;
+      ...
+    &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+    <div class="span4">
+        <form>
+            <div class="control-group paperko-block curl-left">
+                <label class="control-label" for="inputEmail">Email</label>
+
+                <div class="controls">
+                    <input type="text" class="input-block-level" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="control-group paperko-block curl-right">
+                <label class="control-label" for="inputPassword">Password</label>
+
+                <div class="controls">
+                    <input type="password" class="input-block-level" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+<a name="shades"></a>
+
+<h2>Shades</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+    <th colspan="3">Class</th>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <code>.shade-horizontal</code>
+        </td>
+        <td>
+            <code>.shade-top</code>
+        </td>
+        <td>
+            <code>.shade-bottom </code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <code>.shade-vertical</code>
+        </td>
+        <td>
+            <code>.shade-left</code>
+        </td>
+        <td>
+            <code>.shade-right</code>
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <code>.shade-half-horizontal</code>
+        </td>
+        <td>
+            <code>.shade-half-top</code>
+        </td>
+        <td>
+            <code>.shade-half-bottom</code>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<div class="row">
+
+    <div class="paperko-block shade-horizontal span4">
         <h4>Shades horizontal</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 
-    <div class="paper-block shade-top span4">
+    <div class="paperko-block shade-top span4">
         <h4>Shade on top</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 
-    <div class="paper-block shade-bottom span4">
+    <div class="paperko-block shade-bottom span4">
         <h4>Shade at the bottom</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
@@ -200,21 +314,21 @@
 
 <div class="row">
 
-    <div class="paper-block shade-vertical span4">
+    <div class="paperko-block shade-vertical span4">
         <h4>Shades vertical</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 
-    <div class="paper-block shade-left span4">
+    <div class="paperko-block shade-left span4">
         <h4>Shade left</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 
-    <div class="paper-block shade-right span4">
+    <div class="paperko-block shade-right span4">
         <h4>Shade right</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
@@ -224,74 +338,78 @@
 
 <div class="row">
 
-    <div class="paper-block shade-half-horizontal span4">
+    <div class="paperko-block shade-half-horizontal span4">
         <h4>Minimal shades horizontal</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 
-    <div class="paper-block shade-half-top span4">
+    <div class="paperko-block shade-half-top span4">
         <h4>Minimal Shade top</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 
-    <div class="paper-block shade-half-bottom span4">
+    <div class="paperko-block shade-half-bottom span4">
         <h4>Minimal Shade bottom</h4>
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 </div>
+<a name="stacked"></a>
 
-<h3>Stacked sheets</h3>
+<h2>Stacked sheets</h2>
+
+<p>Looks better for large blocks, with a lot of text.</p>
 
 <div class="row">
 
-    <div class="paper-block stacked-chaos span5">
-        <h4>Minimal shades horizontal</h4>
+    <div class="paperko-block stacked-chaos span6">
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue.Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue.Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue.</p>
+            consectetur adipiscing elit. </p>
     </div>
 
-    <div class="paper-block stacked offset2 span5">
-        <h4>Minimal shades horizontal</h4>
+    <div class="paperko-block stacked span6">
 
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue.Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue.Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue.Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue.</p>
+            consectetur adipiscing elit. </p>
     </div>
+
 </div>
 
+<h3>Usage:</h3>
+
+<div class="row">
+    <pre class="prettyprint linenums">
+&lt;div class="paperko-block stacked-chaos"&gt;
+   ...
+&lt;/div&gt;
+
+&lt;div class="paperko-block stacked"&gt;
+    ...
+&lt;/div&gt;
+</pre>
+</div>
+
+<h2>Paper-style lists and stacked effects</h2>
+
 <div class="row">
 
-    <div class="paper-block shade-vertical paperko-folded span4">
-        <div style="height:100px"></div>
-    </div>
-
-    <div class="paper-block stacked-chaos paperko-list span4">
+    <div class="paperko-block paperko-list span4">
         <ul>
             <li>Quisque pulvinar</li>
             <li>urna tristique</li>
@@ -300,7 +418,17 @@
         </ul>
     </div>
 
-    <div class="paper-block shade-horizontal paperko-list-bullets span4">
+    <div class="paperko-block stacked-chaos paperko-list span4">
+        <ul>
+            <li>Quisque pulvinar</li>
+            <li>urna tristique</li>
+            <li>imperdiet gravida</li>
+            <li>felis dolor iaculis quam</li>
+        </ul>
+    </div>
+
+
+    <div class="paperko-block shade-horizontal paperko-list-bullets span4">
         <ul>
             <li>Non commodo erat</li>
             <li>turpis quis nisl</li>
@@ -308,52 +436,126 @@
             <li>lacerat ligula quis</li>
         </ul>
     </div>
+
+
+</div>
+
+
+<div class="row">
+
+    <div class="paperko-block shade-vertical paperko-folded span4">
+        <div style="height:300px"></div>
+    </div>
+
 </div>
 
 <br/><br/><br/><br/><br/>
 
+
+<h2>Let's fold !</h2>
+
+<div class="row">
+    <div class="paperko-block flat paperko-fold-horizontal pull-left">
+        <img src="images/gap1-small.jpg" alt="">
+        <span class="fold-overlay" style="background: url('images/gap1-small.jpg')"></span>
+    </div>
+
+    <div class="paperko-block levitation paperko-fold-vertical pull-left">
+        <img src="images/gap2-small.jpg" alt="">
+
+        <div class="fold-overlay text-center" style="background: url('images/gap2-small.jpg')">
+            Yep, i'm here.
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="paperko-block flat paperko-fold-left pull-left">
+        <img src="images/gap3-small.jpg" alt="">
+
+        <div class="fold-overlay " style="background: url('images/gap3-small.jpg')">
+            <p>
+                Hi <br>
+                there
+            </p>
+        </div>
+    </div>
+
+    <div class="paperko-block flat paperko-fold-right pull-left">
+        <img src="images/gap3-small.jpg" alt="">
+
+        <div class="fold-overlay" style="background: url('images/gap4-small.jpg')">
+            <p class="text-right">
+                Hi <br>
+                there
+            </p>
+        </div>
+    </div>
+
+    <div class="paperko-block flat paperko-fold-top pull-left">
+        <img src="images/gap3-small.jpg" alt="">
+
+        <div class="fold-overlay" style="background: url('images/gap5-small.jpg')">
+            <p>
+                You can use default bootstraps elements, like <a class="btn" href="#">Buttons</a>
+            </p>
+
+        </div>
+    </div>
+
+    <div class="paperko-block flat paperko-fold-bottom pull-left">
+        <img src="images/gap4-small.jpg" alt="">
+
+        <div class="fold-overlay " style="background: url('images/gap6-small.jpg')">
+        </div>
+    </div>
+</div>
+
+
 <h2>Light simulation with realistic multilayered box-shadows</h2>
 
 <div class="row">
-    <div class="paper-block realshadow to-left-top span4">
+    <div class="paperko-block realshadow to-left-top span4">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
-    <div class="paper-block realshadow to-top span4 ">
+    <div class="paperko-block realshadow to-top span4 ">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
-    <div class="paper-block realshadow to-right-top span4">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
-    </div>
-</div>
-
-<div class="row">
-    <div class="paper-block realshadow to-left span4">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
-    </div>
-    <div class="paper-block flat span4">
-        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
-            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
-    </div>
-    <div class="paper-block realshadow to-right span4">
+    <div class="paperko-block realshadow to-right-top span4">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
 </div>
 
 <div class="row">
-    <div class="paper-block realshadow to-left-bottom span4">
+    <div class="paperko-block realshadow to-left span4">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
-    <div class="paper-block realshadow to-bottom span4">
+    <div class="paperko-block flat span4">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
-    <div class="paper-block realshadow to-right-bottom span4">
+    <div class="paperko-block realshadow to-right span4">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
+            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="paperko-block realshadow to-left-bottom span4">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
+            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+    </div>
+    <div class="paperko-block realshadow to-bottom span4">
+        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
+            tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
+    </div>
+    <div class="paperko-block realshadow to-right-bottom span4">
         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nibh quis molestie tincidunt,
             tortor urna condimentum lorem, id interdum neque mauris sit amet augue. </p>
     </div>
@@ -365,7 +567,13 @@
 
 </article>
 </section>
+<script src="js/prettify.js"></script>
+<script src="js/breezko.js"></script>
+
+<script type="text/javascript">
 
 
+    window.prettyPrint && prettyPrint()
+</script>
 </body>
 </html>

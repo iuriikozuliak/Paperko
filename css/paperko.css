@@ -1,31 +1,75 @@
-/* line 1, ../sass/_blocks.scss */
-.paper-block {
+/* line 1, ../sass/_scaffolding.scss */
+.paperko-block {
   -webkit-border-radius: 0px;
   -moz-border-radius: 0px;
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
   border-radius: 0px;
+  position: relative;
+  padding: 1em 1.5em;
+  background: #f6f6f6;
+  border: 1px solid #f9f9f9;
+}
+/* line 10, ../sass/_scaffolding.scss */
+.paperko-block.paperko-list, .paperko-block.paperko-list-bullets, .paperko-block.paperko-fold-horizontal, .paperko-block.paperko-fold-vertical, .paperko-block.paperko-fold-top, .paperko-block.paperko-fold-bottom, .paperko-block.paperko-fold-left, .paperko-block.paperko-fold-right {
+  padding: 0;
+}
+/* line 14, ../sass/_scaffolding.scss */
+.paperko-block p {
+  padding: 0;
+}
+/* line 19, ../sass/_scaffolding.scss */
+.paperko-block h4 {
+  padding: 0 0 0.25em;
+  margin: 0 !important;
+}
+/* line 24, ../sass/_scaffolding.scss */
+.paperko-block label {
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+/* line 30, ../sass/_scaffolding.scss */
+.row {
+  margin-bottom: 2.5em;
+}
+
+/* line 34, ../sass/_scaffolding.scss */
+h3 {
+  padding-bottom: 1em;
+}
+
+/* line 40, ../sass/_scaffolding.scss */
+.pull-left {
+  margin-right: 1em;
+}
+
+/* line 2, ../sass/_blocks.scss */
+.paperko-block,
+.paperko {
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   position: relative;
-  background: #f6f6f6;
-  border: 1px solid #f9f9f9;
 }
-/* line 11, ../sass/_blocks.scss */
-.paper-block.inner-shadow {
+/* line 9, ../sass/_blocks.scss */
+.paperko-block.inner-shadow,
+.paperko.inner-shadow {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05) inset;
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05) inset;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05) inset;
 }
-/* line 15, ../sass/_blocks.scss */
-.paper-block.flat {
+/* line 13, ../sass/_blocks.scss */
+.paperko-block.flat,
+.paperko.flat {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
 }
-/* line 19, ../sass/_blocks.scss */
-.paper-block.flat:before, .paper-block.flat:after {
+/* line 17, ../sass/_blocks.scss */
+.paperko-block.flat:before, .paperko-block.flat:after,
+.paperko.flat:before,
+.paperko.flat:after {
   -webkit-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
@@ -33,15 +77,18 @@
   top: 0;
   border-radius: 0px;
   max-width: 100%;
+  height: 100%;
 }
 /* line 28, ../sass/_blocks.scss */
-.paper-block.flat:before {
+.paperko-block.flat:before,
+.paperko.flat:before {
   -webkit-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
 }
 /* line 33, ../sass/_blocks.scss */
-.paper-block.curl {
+.paperko-block.curl,
+.paperko.curl {
   -webkit-border-radius: 0 0 100% 100%/0 0 10% 10%;
   -moz-border-radius: 0 0 100% 100%/0 0 10% 10%;
   -ms-border-radius: 0 0 100% 100%/0 0 10% 10%;
@@ -49,7 +96,11 @@
   border-radius: 0 0 100% 100%/0 0 10% 10%;
 }
 /* line 37, ../sass/_blocks.scss */
-.paper-block.curl:before, .paper-block.curl-right:before, .paper-block.curl:after, .paper-block.curl-left:after {
+.paperko-block.curl:before, .paperko-block.curl-right:before, .paperko-block.curl:after, .paperko-block.curl-left:after,
+.paperko.curl:before,
+.paperko.curl-right:before,
+.paperko.curl:after,
+.paperko.curl-left:after {
   -webkit-transform: skew(-16deg) rotate(-3deg);
   -moz-transform: skew(-16deg) rotate(-3deg);
   -ms-transform: skew(-16deg) rotate(-3deg);
@@ -64,7 +115,9 @@
   height: 50%;
 }
 /* line 47, ../sass/_blocks.scss */
-.paper-block.curl:before, .paper-block.curl-right:before {
+.paperko-block.curl:before, .paperko-block.curl-right:before,
+.paperko.curl:before,
+.paperko.curl-right:before {
   -webkit-transform: skew(16deg) rotate(3deg);
   -moz-transform: skew(16deg) rotate(3deg);
   -ms-transform: skew(16deg) rotate(3deg);
@@ -74,7 +127,8 @@
   right: 10px;
 }
 /* line 55, ../sass/_blocks.scss */
-.paper-block.curl-left {
+.paperko-block.curl-left,
+.paperko.curl-left {
   -webkit-border-radius: 0 0 0 100%/0 0 0 5%;
   -moz-border-radius: 0 0 0 100%/0 0 0 5%;
   -ms-border-radius: 0 0 0 100%/0 0 0 5%;
@@ -82,7 +136,8 @@
   border-radius: 0 0 0 100%/0 0 0 5%;
 }
 /* line 64, ../sass/_blocks.scss */
-.paper-block.curl-right {
+.paperko-block.curl-right,
+.paperko.curl-right {
   -webkit-border-radius: 0 0 100% 0/0 0 5% 0;
   -moz-border-radius: 0 0 100% 0/0 0 5% 0;
   -ms-border-radius: 0 0 100% 0/0 0 5% 0;
@@ -90,15 +145,19 @@
   border-radius: 0 0 100% 0/0 0 5% 0;
 }
 /* line 67, ../sass/_blocks.scss */
-.paper-block.curl-right:before {
+.paperko-block.curl-right:before,
+.paperko.curl-right:before {
   z-index: -1;
 }
 /* line 71, ../sass/_blocks.scss */
-.paper-block.curl-right:after {
+.paperko-block.curl-right:after,
+.paperko.curl-right:after {
   display: none;
 }
 /* line 77, ../sass/_blocks.scss */
-.paper-block.lift:before, .paper-block.lift:after {
+.paperko-block.lift:before, .paperko-block.lift:after,
+.paperko.lift:before,
+.paperko.lift:after {
   -webkit-box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
   box-shadow: 0 15px 7px rgba(0, 0, 0, 0.4);
@@ -107,14 +166,14 @@
   -ms-transform: rotate(-3deg);
   -o-transform: rotate(-3deg);
   transform: rotate(-3deg);
-  z-index: -2;
   bottom: 15px;
   left: 10px;
   width: 50%;
   height: 20%;
 }
-/* line 87, ../sass/_blocks.scss */
-.paper-block.lift:before {
+/* line 86, ../sass/_blocks.scss */
+.paperko-block.lift:before,
+.paperko.lift:before {
   -webkit-transform: rotate(3deg);
   -moz-transform: rotate(3deg);
   -ms-transform: rotate(3deg);
@@ -123,8 +182,12 @@
   left: auto;
   right: 10px;
 }
-/* line 99, ../sass/_blocks.scss */
-.paper-block.light:before, .paper-block.light-right:before, .paper-block.light:after, .paper-block.light-left:before {
+/* line 98, ../sass/_blocks.scss */
+.paperko-block.light:before, .paperko-block.light-right:before, .paperko-block.light:after, .paperko-block.light-left:before,
+.paperko.light:before,
+.paperko.light-right:before,
+.paperko.light:after,
+.paperko.light-left:before {
   -webkit-transform-origin: 0 100%;
   -moz-transform-origin: 0 100%;
   -ms-transform-origin: 0 100%;
@@ -135,8 +198,10 @@
   width: 50%;
   height: 30%;
 }
-/* line 108, ../sass/_blocks.scss */
-.paper-block.light:before, .paper-block.light-right:before {
+/* line 107, ../sass/_blocks.scss */
+.paperko-block.light:before, .paperko-block.light-right:before,
+.paperko.light:before,
+.paperko.light-right:before {
   -webkit-box-shadow: -80px 0 16px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: -80px 0 16px rgba(0, 0, 0, 0.2);
   box-shadow: -80px 0 16px rgba(0, 0, 0, 0.2);
@@ -146,8 +211,10 @@
   -o-transform: skew(40deg);
   transform: skew(40deg);
 }
-/* line 114, ../sass/_blocks.scss */
-.paper-block.light:after, .paper-block.light-left:before {
+/* line 113, ../sass/_blocks.scss */
+.paperko-block.light:after, .paperko-block.light-left:before,
+.paperko.light:after,
+.paperko.light-left:before {
   -webkit-box-shadow: 80px 0 16px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 80px 0 16px rgba(0, 0, 0, 0.2);
   box-shadow: 80px 0 16px rgba(0, 0, 0, 0.2);
@@ -159,18 +226,32 @@
   left: auto;
   right: 80px;
 }
-/* line 133, ../sass/_blocks.scss */
-.paper-block.light-left:after {
+/* line 132, ../sass/_blocks.scss */
+.paperko-block.light-left:after,
+.paperko.light-left:after {
   display: none;
 }
-/* line 138, ../sass/_blocks.scss */
-.paper-block.levitation {
+/* line 137, ../sass/_blocks.scss */
+.paperko-block.levitation,
+.paperko.levitation {
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 18px 10px -15px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 18px 10px -15px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2), 0 18px 10px -15px rgba(0, 0, 0, 0.4), 0 1px 4px rgba(0, 0, 0, 0.2);
 }
-/* line 147, ../sass/_blocks.scss */
-.paper-block.shade-horizontal:before, .paper-block.shade-bottom:before, .paper-block.shade-half-horizontal:before, .paper-block.shade-half-bottom:before, .paper-block.shade-horizontal:after, .paper-block.shade-top:after, .paper-block.shade-half-horizontal:after, .paper-block.shade-half-top:after {
+/* line 146, ../sass/_blocks.scss */
+.paperko-block.shade-horizontal:before, .paperko-block.shade-bottom:before, .paperko-block.shade-half-horizontal:before, .paperko-block.shade-half-bottom:before,
+.paperko-block.paperko.shade-half-bottom:before, .paperko-block.shade-horizontal:after, .paperko-block.shade-top:after, .paperko-block.shade-half-horizontal:after, .paperko-block.shade-half-top:after,
+.paperko-block.paperko.shade-half-top:after,
+.paperko.shade-horizontal:before,
+.paperko.shade-bottom:before,
+.paperko.paperko-block.shade-half-bottom:before,
+.paperko.shade-half-horizontal:before,
+.paperko.shade-half-bottom:before,
+.paperko.shade-horizontal:after,
+.paperko.shade-top:after,
+.paperko.paperko-block.shade-half-top:after,
+.paperko.shade-half-horizontal:after,
+.paperko.shade-half-top:after {
   -webkit-border-radius: 100% 100%/15% 15%;
   -moz-border-radius: 100% 100%/15% 15%;
   -ms-border-radius: 100% 100%/15% 15%;
@@ -186,29 +267,45 @@
   width: auto;
   height: auto;
 }
-/* line 160, ../sass/_blocks.scss */
-.paper-block.shade-horizontal:after, .paper-block.shade-top:after, .paper-block.shade-half-horizontal:after, .paper-block.shade-half-top:after {
+/* line 159, ../sass/_blocks.scss */
+.paperko-block.shade-horizontal:after, .paperko-block.shade-top:after, .paperko-block.shade-half-horizontal:after, .paperko-block.shade-half-top:after,
+.paperko-block.paperko.shade-half-top:after,
+.paperko.shade-horizontal:after,
+.paperko.shade-top:after,
+.paperko.paperko-block.shade-half-top:after,
+.paperko.shade-half-horizontal:after,
+.paperko.shade-half-top:after {
   top: 0;
   bottom: 50%;
 }
-/* line 170, ../sass/_blocks.scss */
-.paper-block.shade-bottom:after {
+/* line 169, ../sass/_blocks.scss */
+.paperko-block.shade-bottom:after,
+.paperko.shade-bottom:after {
   display: none;
 }
-/* line 176, ../sass/_blocks.scss */
-.paper-block.shade-half-horizontal:after, .paper-block.shade-half-top:after, .paper-block.shade-half-horizontal:before, .paper-block.shade-half-bottom:before {
+/* line 175, ../sass/_blocks.scss */
+.paperko-block.shade-half-horizontal:after, .paperko-block.shade-half-top:after, .paperko-block.shade-half-horizontal:before, .paperko-block.shade-half-bottom:before,
+.paperko.shade-half-horizontal:after,
+.paperko.shade-half-top:after,
+.paperko.shade-half-horizontal:before,
+.paperko.shade-half-bottom:before {
   -webkit-border-radius: 100% 100%/100% 25%;
   -moz-border-radius: 100% 100%/100% 25%;
   -ms-border-radius: 100% 100%/100% 25%;
   -o-border-radius: 100% 100%/100% 25%;
   border-radius: 100% 100%/100% 25%;
 }
-/* line 192, ../sass/_blocks.scss */
-.paper-block.shade-half-bottom:after {
+/* line 191, ../sass/_blocks.scss */
+.paperko-block.shade-half-bottom:after,
+.paperko.shade-half-bottom:after {
   display: none;
 }
-/* line 198, ../sass/_blocks.scss */
-.paper-block.shade-vertical:before, .paper-block.shade-left:before, .paper-block.shade-vertical:after, .paper-block.shade-right:after {
+/* line 197, ../sass/_blocks.scss */
+.paperko-block.shade-vertical:before, .paperko-block.shade-left:before, .paperko-block.shade-vertical:after, .paperko-block.shade-right:after,
+.paperko.shade-vertical:before,
+.paperko.shade-left:before,
+.paperko.shade-vertical:after,
+.paperko.shade-right:after {
   -webkit-border-radius: 15% 15%/100% 100%;
   -moz-border-radius: 15% 15%/100% 100%;
   -ms-border-radius: 15% 15%/100% 100%;
@@ -224,17 +321,22 @@
   height: auto;
   width: auto;
 }
-/* line 211, ../sass/_blocks.scss */
-.paper-block.shade-vertical:after, .paper-block.shade-right:after {
+/* line 210, ../sass/_blocks.scss */
+.paperko-block.shade-vertical:after, .paperko-block.shade-right:after,
+.paperko.shade-vertical:after,
+.paperko.shade-right:after {
   right: 0;
   left: 50%;
 }
-/* line 221, ../sass/_blocks.scss */
-.paper-block.shade-left:after {
+/* line 220, ../sass/_blocks.scss */
+.paperko-block.shade-left:after,
+.paperko.shade-left:after {
   display: none;
 }
-/* line 227, ../sass/_blocks.scss */
-.paper-block.stacked-chaos:before, .paper-block.stacked-chaos:after {
+/* line 226, ../sass/_blocks.scss */
+.paperko-block.stacked-chaos:before, .paperko-block.stacked-chaos:after,
+.paperko.stacked-chaos:before,
+.paperko.stacked-chaos:after {
   content: "";
   height: 98%;
   position: absolute;
@@ -242,66 +344,78 @@
   max-width: 100%;
   z-index: -1;
 }
-/* line 235, ../sass/_blocks.scss */
-.paper-block.stacked-chaos:before {
+/* line 234, ../sass/_blocks.scss */
+.paperko-block.stacked-chaos:before,
+.paperko.stacked-chaos:before {
   background: #fafafa;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
   left: -5px;
   top: 0px;
   transform: rotate(-2.5deg);
 }
-/* line 242, ../sass/_blocks.scss */
-.paper-block.stacked-chaos:after {
+/* line 241, ../sass/_blocks.scss */
+.paperko-block.stacked-chaos:after,
+.paperko.stacked-chaos:after {
   background: #f6f6f6;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   right: -3px;
   top: 1px;
   transform: rotate(1.4deg);
 }
-/* line 251, ../sass/_blocks.scss */
-.paper-block.stacked {
+/* line 250, ../sass/_blocks.scss */
+.paperko-block.stacked,
+.paperko.stacked {
   box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), 3px 3px 0 #f6f6f6, 4px 4px 0 rgba(0, 0, 0, 0.125), 6px 6px 0 #f6f6f6, 7px 7px 0 rgba(0, 0, 0, 0.15), 9px 9px 0 #f6f6f6, 10px 10px 0 rgba(0, 0, 0, 0.175);
 }
-/* line 264, ../sass/_blocks.scss */
-.paper-block:before, .paper-block:after {
+/* line 263, ../sass/_blocks.scss */
+.paperko-block:before, .paperko-block:after,
+.paperko:before,
+.paperko:after {
   content: '';
   width: 100%;
-  height: 100%;
   position: absolute;
   background: white;
   z-index: -1;
   max-width: 300px;
 }
-/* line 286, ../sass/_blocks.scss */
-.paper-block.realshadow.to-left {
+/* line 284, ../sass/_blocks.scss */
+.paperko-block.realshadow.to-left,
+.paperko.realshadow.to-left {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), -4px 0px 3px rgba(0, 0, 0, 0.04), -11px 0px 6px rgba(0, 0, 0, 0.04), -20px 0px 10px rgba(0, 0, 0, 0.04), -34px 0px 15px rgba(0, 0, 0, 0.04), -51px 0px 21px rgba(0, 0, 0, 0.04);
 }
-/* line 295, ../sass/_blocks.scss */
-.paper-block.realshadow.to-right {
+/* line 293, ../sass/_blocks.scss */
+.paperko-block.realshadow.to-right,
+.paperko.realshadow.to-right {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 4px 0px 3px rgba(0, 0, 0, 0.04), 11px 0px 6px rgba(0, 0, 0, 0.04), 20px 0px 10px rgba(0, 0, 0, 0.04), 34px 0px 15px rgba(0, 0, 0, 0.04), 51px 0px 21px rgba(0, 0, 0, 0.04);
 }
-/* line 305, ../sass/_blocks.scss */
-.paper-block.realshadow.to-bottom {
+/* line 303, ../sass/_blocks.scss */
+.paperko-block.realshadow.to-bottom,
+.paperko.realshadow.to-bottom {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 4px 3px rgba(0, 0, 0, 0.04), 0px 11px 6px rgba(0, 0, 0, 0.04), 0px 20px 10px rgba(0, 0, 0, 0.04), 0px 34px 15px rgba(0, 0, 0, 0.04), 0px 51px 21px rgba(0, 0, 0, 0.04);
 }
-/* line 315, ../sass/_blocks.scss */
-.paper-block.realshadow.to-top {
+/* line 313, ../sass/_blocks.scss */
+.paperko-block.realshadow.to-top,
+.paperko.realshadow.to-top {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px -2px 3px rgba(0, 0, 0, 0.04), 0px -5px 6px rgba(0, 0, 0, 0.04), 0px -10px 10px rgba(0, 0, 0, 0.04), 0px -17px 15px rgba(0, 0, 0, 0.04), 0px -25px 21px rgba(0, 0, 0, 0.04);
 }
-/* line 325, ../sass/_blocks.scss */
-.paper-block.realshadow.to-left-top {
+/* line 323, ../sass/_blocks.scss */
+.paperko-block.realshadow.to-left-top,
+.paperko.realshadow.to-left-top {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), -2px -2px 3px rgba(0, 0, 0, 0.04), -5px -5px 6px rgba(0, 0, 0, 0.04), -10px -10px 10px rgba(0, 0, 0, 0.04), -17px -17px 15px rgba(0, 0, 0, 0.04), -25px -25px 21px rgba(0, 0, 0, 0.04);
 }
-/* line 335, ../sass/_blocks.scss */
-.paper-block.realshadow.to-right-top {
+/* line 333, ../sass/_blocks.scss */
+.paperko-block.realshadow.to-right-top,
+.paperko.realshadow.to-right-top {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 2px -2px 3px rgba(0, 0, 0, 0.04), 5px -5px 6px rgba(0, 0, 0, 0.04), 10px -10px 10px rgba(0, 0, 0, 0.04), 17px -17px 15px rgba(0, 0, 0, 0.04), 25px -25px 21px rgba(0, 0, 0, 0.04);
 }
-/* line 345, ../sass/_blocks.scss */
-.paper-block.realshadow.to-left-bottom {
+/* line 343, ../sass/_blocks.scss */
+.paperko-block.realshadow.to-left-bottom,
+.paperko.realshadow.to-left-bottom {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), -2px 2px 3px rgba(0, 0, 0, 0.04), -5px 5px 6px rgba(0, 0, 0, 0.04), -10px 10px 10px rgba(0, 0, 0, 0.04), -17px 17px 15px rgba(0, 0, 0, 0.04), -25px 25px 21px rgba(0, 0, 0, 0.04);
 }
-/* line 354, ../sass/_blocks.scss */
-.paper-block.realshadow.to-right-bottom {
+/* line 352, ../sass/_blocks.scss */
+.paperko-block.realshadow.to-right-bottom,
+.paperko.realshadow.to-right-bottom {
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 2px 2px 3px rgba(0, 0, 0, 0.04), 5px 5px 6px rgba(0, 0, 0, 0.04), 10px 10px 10px rgba(0, 0, 0, 0.04), 17px 17px 15px rgba(0, 0, 0, 0.04), 25px 25px 21px rgba(0, 0, 0, 0.04);
 }
 
@@ -547,16 +661,16 @@
   background-image: linear-gradient(rgba(0, 0, 0, 0.025), rgba(255, 255, 255, 0.05) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(255, 255, 255, 0.05) 67%, rgba(0, 0, 0, 0.05) 67%, rgba(255, 255, 255, 0.025));
 }
 
-/* line 6, ../sass/_paper-style.scss */
+/* line 5, ../sass/_paper-style.scss */
 .paperko-list, .paperko-list-bullets {
   background: #fff;
 }
-/* line 9, ../sass/_paper-style.scss */
+/* line 8, ../sass/_paper-style.scss */
 .paperko-list ul, .paperko-list-bullets ul {
   list-style: none;
   padding: 1em 0;
 }
-/* line 13, ../sass/_paper-style.scss */
+/* line 12, ../sass/_paper-style.scss */
 .paperko-list ul:after, .paperko-list-bullets ul:after {
   content: '';
   position: absolute;
@@ -567,17 +681,17 @@
   width: 1px;
   height: 101%;
 }
-/* line 26, ../sass/_paper-style.scss */
+/* line 25, ../sass/_paper-style.scss */
 .paperko-list li, .paperko-list-bullets li {
   border-bottom: 1px solid #cddcf3;
   padding: 8px 10px 2px 35px;
 }
 
-/* line 35, ../sass/_paper-style.scss */
+/* line 34, ../sass/_paper-style.scss */
 .paperko-list-bullets li {
   position: relative;
 }
-/* line 38, ../sass/_paper-style.scss */
+/* line 37, ../sass/_paper-style.scss */
 .paperko-list-bullets li:before {
   content: '';
   display: block;
@@ -591,46 +705,4 @@
   left: 2%;
   z-index: 10;
   box-shadow: inset 2px 2px 5px rgba(125, 125, 125, 0.4);
-}
-
-/* line 1, ../sass/_scaffolding.scss */
-.paper-block {
-  position: relative;
-  padding: 1em 1.5em;
-}
-/* line 7, ../sass/_scaffolding.scss */
-.paper-block.paperko-list, .paper-block.paperko-list-bullets, .paper-block.paperko-fold-horizontal, .paper-block.paperko-fold-vertical, .paper-block.paperko-fold-top, .paper-block.paperko-fold-bottom, .paper-block.paperko-fold-left, .paper-block.paperko-fold-right {
-  padding: 0;
-}
-/* line 11, ../sass/_scaffolding.scss */
-.paper-block p {
-  padding: 0;
-}
-
-/* line 16, ../sass/_scaffolding.scss */
-.row {
-  margin-bottom: 2.5em;
-}
-
-/* line 20, ../sass/_scaffolding.scss */
-h2 {
-  font-size: 2em;
-  padding-bottom: 1em;
-}
-
-/* line 25, ../sass/_scaffolding.scss */
-h3 {
-  padding-bottom: 1em;
-  font-size: 1.5em;
-}
-
-/* line 30, ../sass/_scaffolding.scss */
-h4 {
-  padding: 0 0 0.25em;
-  margin: 0 !important;
-}
-
-/* line 35, ../sass/_scaffolding.scss */
-.pull-left {
-  margin-right: 1em;
 }
